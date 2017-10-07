@@ -19,6 +19,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+// Imports
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+
 // Common constants that are used in this extension
 var EMPTY_STRING = '';
 var SUPER_L = 'Super_L';
@@ -66,3 +70,28 @@ var GNU_SOFTWARE = '<span size="small">' +
     'See the <a href="https://gnu.org/licenses/old-licenses/gpl-2.0.html">' +
 	'GNU General Public License, version 2 or later</a> for details.' +
 	'</span>';
+var MENU_STYLE_CHOOSER = {
+    ThumbnailHeight: 200,
+    ThumbnailWidth: 200,
+    WindowHeight: 480,
+    WindowWidth: 660,
+    MaxColumns: 6,
+    Styles: [
+        {
+            thumbnail: Me.path + '/media/styles/todo.png',
+            name: 'Arc Menu'
+        },
+        {
+            thumbnail: Me.path + '/media/styles/todo.png',
+            name: 'Whisker Style'
+        },
+        {
+            thumbnail: Me.path + '/media/styles/todo.png',
+            name: 'Brisk Style'
+        },
+        {
+            thumbnail: Me.path + '/media/styles/todo.png',
+            name: 'GNOME Style'
+        }
+    ]
+};
