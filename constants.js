@@ -78,20 +78,40 @@ var MENU_STYLE_CHOOSER = {
     MaxColumns: 6,
     Styles: [
         {
-            thumbnail: Me.path + '/media/styles/todo.png',
+            thumbnail: Me.path + '/media/styles/arc-menu.svg',
             name: 'Arc Menu'
         },
         {
-            thumbnail: Me.path + '/media/styles/todo.png',
+            thumbnail: Me.path + '/media/styles/whisker-menu.svg',
             name: 'Whisker Style'
         },
         {
-            thumbnail: Me.path + '/media/styles/todo.png',
+            thumbnail: Me.path + '/media/styles/simple-menu.svg',
+            name: 'Simple Style'
+        },
+        {
+            thumbnail: Me.path + '/media/styles/elementary-menu.svg',
+            name: 'Elementary Style'
+        },
+        {
+            thumbnail: Me.path + '/media/styles/gnome-menu.svg',
+            name: 'Gnome Style'
+        },
+        {
+            thumbnail: Me.path + '/media/styles/brisk-menu.svg',
             name: 'Brisk Style'
         },
         {
-            thumbnail: Me.path + '/media/styles/todo.png',
-            name: 'GNOME Style'
+            thumbnail: Me.path + '/media/styles/mint-menu.svg',
+            name: 'Mint Style'
+        },
+        {
+            thumbnail: Me.path + '/media/styles/windows-10-style-menu.svg',
+            name: 'Windows 10 Style'
+        },
+        {
+            thumbnail: Me.path + '/media/styles/gnome-dash-menu.svg',
+            name: 'GNOME dash Style'
         }
     ]
 };
