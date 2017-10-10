@@ -107,7 +107,7 @@ var MENU_STYLE_CHOOSER = {
         },
         {
             thumbnail: Me.path + '/media/styles/redmond-style-menu.svg',
-            name: 'Windows 10 Style'
+            name: 'Redmond Style'
         },
         {
             thumbnail: Me.path + '/media/styles/gnome-dash-menu.svg',
