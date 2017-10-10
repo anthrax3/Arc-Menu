@@ -106,7 +106,7 @@ var MENU_STYLE_CHOOSER = {
             name: 'Mint Style'
         },
         {
-            thumbnail: Me.path + '/media/styles/windows-10-style-menu.svg',
+            thumbnail: Me.path + '/media/styles/redmond-style-menu.svg',
             name: 'Windows 10 Style'
         },
         {
