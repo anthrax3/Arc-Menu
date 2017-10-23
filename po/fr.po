@@ -127,11 +127,11 @@ msgstr "Icône Arc Menu"
 
 #: prefs.js:388
 msgid "System Icon"
-msgstr "Icône systeme"
+msgstr "Icône système"
 
 #: prefs.js:389
 msgid "Custom Icon"
-msgstr "Icône personnalisé"
+msgstr "Icône personnalisée"
 
 #: prefs.js:404
 msgid "Icon size"
@@ -143,7 +143,7 @@ msgstr "la valeur par défaut est"
 
 #: prefs.js:448
 msgid "About"
-msgstr "A propos"
+msgstr "À propos"
 
 #: prefs.js:477
 msgid "Arc-Menu"
@@ -163,7 +163,7 @@ msgstr "Aperçu des activités"
 
 #: menu.js:154
 msgid "Power Off"
-msgstr "Eteindre"
+msgstr "Éteindre"
 
 #: menu.js:179
 msgid "Log Out"
@@ -195,7 +195,7 @@ msgstr "Accueil"
 
 #: menu.js:1041
 msgid "Type to search…"
-msgstr "Ecrire pour chercher…"
+msgstr "Écrire pour chercher…"
 
 #: menu.js:1130
 msgid "Software"
