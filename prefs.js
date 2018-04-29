@@ -422,6 +422,63 @@ const AppearanceSettingsPage = new Lang.Class({
 
         // add the frames
         this.add(menuPositionFrame);
+       /*
+         * Menu Theming Frame Box
+         */
+        let menuThemingFrame = new AM.FrameBox();
+        let menuThemingRow = new AM.FrameBoxRow();
+        let menuTransparencyRow = new AM.FrameBoxRow();
+
+        // first row
+        let menuThemingLabel = new Gtk.Label({
+            label: _("Use built-in theme"),
+            use_markup: true,
+            xalign: 0,
+            hexpand: true
+        });
+        let menuBuiltInThemingSwitch = new Gtk.Switch({ halign: Gtk.Align.END, active: true });
+        menuBuiltInThemingSwitch.connect('notify::active', Lang.bind(this, function(button) {
+            menuTransparencyRow.set_sensitive(!button.get_active());
+        }));
+        menuTransparencyRow.set_sensitive(!menuBuiltInThemingSwitch.get_active());
+        menuThemingRow.add(menuThemingLabel);
+        menuThemingRow.add(menuBuiltInThemingSwitch);
+        menuThemingFrame.add(menuThemingRow);
+
+        // second row
+        let menuTransparencyLabel = new Gtk.Label({
+            label: _("Transparency level"),
+            use_markup: true,
+            xalign: 0
+        });
+        let transparencyHScale = new Gtk.HScale({
+            adjustment: new Gtk.Adjustment({
+                lower: 0,
+                upper: 100,
+                step_increment: 1,
+                page_increment: 1,
+                page_size: 0
+            }),
+            digits: 0,
+            round_digits: 0,
+            hexpand: true,
+            value_pos: Gtk.PositionType.RIGHT
+        });
+        transparencyHScale.connect('format-value', function(scale, value) { return value.toString() + ' %'; });
+        Constants.TRANSPARENCY_LEVELS.forEach(function(num) {
+            transparencyHScale.add_mark(num, Gtk.PositionType.BOTTOM, num.toString());
+        });
+        transparencyHScale.set_value(this.settings.get_double('menu-transparency-level'));
+        transparencyHScale.connect('value-changed', Lang.bind(this, function(){
+            this.settings.set_double('menu-transparency-level', transparencyHScale.get_value());
+        }));
+
+        menuTransparencyRow.add(menuTransparencyLabel);
+        menuTransparencyRow.add(transparencyHScale);
+        menuThemingFrame.add(menuTransparencyRow);
+
+this.add(menuThemingFrame);
+     
     }
 });
 
