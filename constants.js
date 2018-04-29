@@ -61,6 +61,7 @@ var ARC_MENU_LOGO = {
     Path: '/media/logo.png',
     Size: [216, 229] // width, height
 };
+const TRANSPARENCY_LEVELS = [0, 10, 20, 30, 40, 50, 60 ,70, 80, 90, 100];
 var GNU_SOFTWARE = '<span size="small">' +
     'This program comes with absolutely no warranty.\n' +
     'See the <a href="https://gnu.org/licenses/old-licenses/gpl-2.0.html">' +
